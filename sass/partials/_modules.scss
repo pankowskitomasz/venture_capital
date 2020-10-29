@@ -1,0 +1,122 @@
+@include aoa-bg-series($bg__classes,$bg__aoa);
+
+*{
+    font-family: $font-main__family;
+}
+
+%bg-blend{
+    @include background-blend($bg__blend--type, $color__bg-1);
+}
+%bg-blend-wht{
+    @include background-blend($bg__blend--type, darken($color__white,10%));
+}
+.bg{
+    &-black{
+        background-color: $color__black !important;
+    }
+    &-dark{
+        background-color: $color__dark!important;
+    }
+    &-transparent{
+        background-color: $color__transparent!important;
+    }
+    &-white{
+        background-color: $color__white!important;
+    }
+}
+.border{
+    &-dark{
+        border: $border__param $color__dark;
+    }
+}
+.comingsoon{
+    &-s1{
+        @extend %bg-blend;
+    }
+}
+.error{
+    &-s1{
+        @extend %bg-blend;
+    }
+}
+.position{
+    &-absolute{
+        position: absolute !important;
+    }
+}
+.privacy{
+    &-container{
+        background-color: $color__transparent !important;
+        backdrop-filter: $backdrop__filter--privacy;
+        border-radius: $border__radius;
+        margin-bottom: 50px;
+        margin-top: 50px;
+    }
+    &-s1{
+        @extend %bg-blend-wht;
+    }
+}
+.float{
+    &-left{
+        float: left;
+    }
+}
+.font{
+    &-bold{
+        font-weight: 900;
+    }
+    &-logo{
+        @include set-font-params($font-logo__family,$font-logo__size);
+        font-variant: small-caps;
+        text-decoration: none !important;
+    }
+    &-menu{
+        @include set-font-params($font-main__family,$font-main__size);
+    }
+}
+.link{
+    &:hover{
+        text-decoration: underline;
+    }
+    text-decoration: none;
+}
+.navbar{
+    &-toggler{
+        &-icon{
+            background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'><path stroke='rgb(104 211 145)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>") !important;
+        }
+    }
+}
+.p{
+    &-2{
+        padding: 20px;
+    }
+}
+.shadow{
+    box-shadow: $box_shadow;
+}
+.text{
+    &-blue{
+        color:$color__blue!important;
+    }
+    &-center{
+        text-align: center;
+    }
+    &-dark{
+        color: $color__dark!important;
+    }
+    &-left{
+        text-align:left;
+    }
+    &-shadow{
+        &-dark{
+            text-shadow: $text__shadow--dark;
+        }
+        &-light{
+            text-shadow: $text__shadow--light;
+        }
+    }
+    &-white{
+        color: $color__white !important;
+    }
+}

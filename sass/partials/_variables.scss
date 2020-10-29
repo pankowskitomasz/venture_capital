@@ -1,0 +1,30 @@
+$backdrop__filter--privacy: blur(10px) contrast(25%);
+$bg__blend--type: multiply;
+$bg__classes:
+    "error",
+    "comingsoon",
+    "privacy";
+$bg__comingsoon-img: "../img/coming.jpg";
+$bg__error-img: "../img/coming.jpg";
+$bg__privacy-img: "../img/privacy.jpg";
+$bg__aoa:
+    $bg__error-img,
+    $bg__comingsoon-img,
+    $bg__privacy-img;
+$body__min-height: 100%;
+$border__param: 1px solid;
+$border__radius: 30px;
+$color__bg-1: #bbb;
+$color__black: #121212;
+$color__blue: #1cafed;
+$color__dark: #333;
+$color__white: #fff;
+$color__transparent: transparent;
+$font-logo__family: 'Playfair Display';
+$font-logo__size: 32px;
+$font-main__family: 'Playfair Display';
+$font-main__size: 16px;
+$section__min-height: 100vh;
+$box_shadow: 0 0 3px $color__dark;
+$text__shadow--dark: 0 0 3px $color__dark;
+$text__shadow--light: 0 0 3px $color__white;

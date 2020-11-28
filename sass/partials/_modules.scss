@@ -10,12 +10,27 @@
 %bg-blend-wht{
     @include background-blend($bg__blend--type, darken($color__white,10%));
 }
+%bg-scroll{
+    background-attachment: scroll;
+    background-position: center;
+    background-size: cover;
+}
+.-m{
+    &t{
+        &-05{
+            margin: -5px;
+        }
+    }
+}
 .bg{
     &-black{
         background-color: $color__black !important;
     }
     &-dark{
         background-color: $color__dark!important;
+    }
+    &-light-gray{
+        background-color: $color__light-gray !important;
     }
     &-transparent{
         background-color: $color__transparent!important;
@@ -25,8 +40,26 @@
     }
 }
 .border{
+    &-b{
+        border-bottom: $border__param;
+    }
     &-dark{
-        border: $border__param $color__dark;
+        border-color: $color__dark!important;
+    }
+    &-gray{
+        border-color: $color__gray!important;
+    }
+    &-light-gray{
+        border-color: $color__light-gray!important;
+    }
+    &-t{
+        border-top: $border__param;
+    }
+    border: $border__param;
+}
+.contact{
+    &-s1{
+        @extend %bg-scroll;
     }
 }
 .comingsoon{
@@ -34,9 +67,251 @@
         @extend %bg-blend;
     }
 }
+.d{
+    &-block{
+        display: block;
+    }
+}
 .error{
     &-s1{
         @extend %bg-blend;
+    }
+}
+.filter{
+    &-grayscale{
+        filter: $filter-grayscale;
+    }
+    &-invert{
+        filter: $filter-invert;
+    }
+}
+.float{
+    &-left{
+        float: left;
+    }
+}
+.font{
+    &-bold{
+        font-weight: 900;
+    }
+    &-italic{
+        font-style: italic;
+    }
+    &-logo{
+        @include set-font-params($font-logo__family,$font-logo__size);
+        font-variant: small-caps;
+        text-decoration: none !important;
+    }
+    &-menu{
+        @include set-font-params($font-main__family,$font-main__size);
+    }
+    &-thin{
+        font-weight: 100;
+    }
+}
+.form{
+    &-control{
+        border: none;
+        border-bottom: 1px solid $color__gray !important;
+        outline: none;
+    }
+}
+.h{
+    &-100{
+        height: 100%;
+    }
+}
+.index{
+    &-s1{
+        @extend %bg-scroll;
+    }
+    &-s2{
+        @extend %bg-blend;
+    }
+    &-s6{
+        @extend %bg-blend;
+    }
+}
+.link{
+    &:hover{
+        text-decoration: underline;
+    }
+    text-decoration: none;
+
+}
+.m{
+    &-0{
+        margin: 0px;
+    }
+    &-1{
+        margin: 10px;
+    }
+    &-2{
+        margin: 20px;
+    }
+    &b{
+        &-1{
+            margin-bottom: 10px !important;
+        }
+        &-2{
+            margin-bottom: 20px !important;
+        }
+        &-3{
+            margin-bottom: 30px !important;
+        }
+        &-4{
+            margin-bottom: 40px !important;
+        }
+    }
+    &t-0{
+        margin-top: 0px !important;
+    }
+}
+.mdc-top-app-bar{
+    height: $header__height;
+}
+.minh{
+    &-20vh{
+        min-height: 20vh;
+    }
+    &-25vh{
+        min-height: 25vh;
+    }
+    &-35vh{
+        min-height: 35vh;
+    }
+    &-50vh{
+        min-height: 50vh;
+    }
+    &-75vh{
+        min-height: 75vh;
+    }
+    &-100vh{
+        min-height: 100vh;
+    }
+    &-215px{
+        min-height: 215px;
+    }
+}
+.mx{
+    &-auto{
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+.nav{
+    &-item{
+        &:hover{
+            .text-gray{
+                color: $color__white !important;
+            }
+            background-color: $color__dark !important;
+            font-weight: 700;
+        }
+        border-radius: 0 !important;
+        display: block !important;
+        padding:7px !important;
+        width:100%;
+    }
+    &-menu{
+        &-icon{
+            display: block;
+            float: right;
+            width: auto;
+        }
+        &--open{
+            display: block;
+        }
+        .text-gray{
+            color: $color__dark !important;
+        }
+        background-color: $color__white !important;
+        border: 1px solid $color__gray !important;
+        display: none;
+        left:0;
+        opacity: 0.8;
+        position: absolute;
+        top: $header__height;
+        width:100%;
+    }
+}
+.navbar{
+    &-toggler{
+        &-icon{
+            background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'><path stroke='rgb(104 211 145)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>") !important;
+        }
+    }
+}
+.object{
+    &-cover{
+        object-fit: cover;
+    }
+}
+.opacity{
+    &-8{
+        opacity: 0.8;
+    }
+    &-9{
+        opacity: 0.9;
+    }
+}
+.outline{
+    &-none{
+        outline:none !important;
+    }
+}
+.owl{   
+    &-carousel {
+        .owl-stage {
+            display: flex;
+        }
+        .owl-item {
+            display: flex;
+            flex: 1 0 auto;
+        }
+    }
+    &-dot{
+        &.active{
+            background-color: $owl-dot__bg-active!important;
+        }
+        background-color: $owl-dot__bg!important;
+        border: 1px solid $color__white!important;
+        border-radius: 50%;
+        height: $owl-dot__size;
+        margin-right: $owl-dot__margin;
+        opacity: 0.8;
+        outline: none;
+        width: $owl-dot__size;
+    }
+    &-item{
+        padding: 10px;
+    }
+}
+.p{
+    &-0{
+        padding: 0px !important;
+    }
+    &-1{
+        padding: 10px;
+    }
+    &-2{
+        padding: 20px;
+    }
+    &t{
+        &-2{
+            padding: 20px;
+        }
+    }
+    &x{
+        &-0{
+            padding-left:0px;
+            padding-right:0px;
+        }
+    }
+}
+.portfolio{
+    &-s1{
+        @extend %bg-scroll;
     }
 }
 .position{
@@ -56,46 +331,18 @@
         @extend %bg-blend-wht;
     }
 }
-.float{
-    &-left{
-        float: left;
-    }
-}
-.font{
-    &-bold{
-        font-weight: 900;
-    }
-    &-logo{
-        @include set-font-params($font-logo__family,$font-logo__size);
-        font-variant: small-caps;
-        text-decoration: none !important;
-    }
-    &-menu{
-        @include set-font-params($font-main__family,$font-main__size);
-    }
-}
-.link{
-    &:hover{
-        text-decoration: underline;
-    }
-    text-decoration: none;
-}
-.navbar{
-    &-toggler{
-        &-icon{
-            background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'><path stroke='rgb(104 211 145)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>") !important;
-        }
-    }
-}
-.p{
-    &-2{
-        padding: 20px;
+.services{
+    &-s1{
+        @extend %bg-scroll;
     }
 }
 .shadow{
     box-shadow: $box_shadow;
 }
 .text{
+    &-black{
+        color: $color__black !important;
+    }
     &-blue{
         color:$color__blue!important;
     }
@@ -105,8 +352,23 @@
     &-dark{
         color: $color__dark!important;
     }
+    &-gray{
+        color: $color__gray !important;
+    }
+    &-jusitfy{
+        text-align: justify;
+    }
     &-left{
         text-align:left;
+    }
+    &-md{
+        font-size: $text-md;
+    }
+    &-lg{
+        font-size: $text-lg;
+    }
+    &-right{
+        text-align:right;
     }
     &-shadow{
         &-dark{
@@ -118,5 +380,246 @@
     }
     &-white{
         color: $color__white !important;
+    }
+}
+.user{
+    &-s1{
+        @extend %bg-scroll;
+    }
+}
+.w{
+    &-75{
+        width: 75% !important;
+    }
+    &-100{
+        width: 100% !important;
+    }
+}
+a{
+    text-decoration: none !important;
+}
+textarea{
+    border: 1px solid $color__blue!important;
+    height: 100px;
+    resize:none;
+}
+
+@media all and (max-width: 599px){
+    .phone{
+        &-img{
+            &-25vh{
+                height: 25vh;
+                object-fit: cover;
+            }
+            &-50vh{
+                height: 50vh;
+                object-fit: cover;
+            }
+            &-75vh{
+                height: 75vh;
+                object-fit: cover;
+            }
+            &-100vh{
+                height: 100vh;
+                object-fit: cover;
+            }
+        }
+        &-text{
+            &-center{
+                text-align: center;
+            }
+            &-left{
+                text-align: left;
+            }
+            &-right{
+                text-align: right;
+            }
+        }
+        &-w{
+            &-25{
+                width: 25%;
+            }
+            &-35{
+                width: 35%;
+            }
+            &-50{
+                width: 50%;
+            }
+            &-75{
+                width: 75%;
+            }
+            &-100{
+                width: 100%;
+            }
+        }
+    }
+    .phone-minh{
+        &-25vh{
+            min-height: 25vh;
+        }
+        &-50vh{
+            min-height: 50vh;
+        }
+        &-75vh{
+            min-height: 75vh;
+        }
+        &-100vh{
+            min-height: 100vh;
+        }
+    }
+}
+@media all and (min-width: 600px){
+    .tablet{
+        &-img{
+            &-25vh{
+                height: 25vh;
+                object-fit: cover;
+            }
+            &-50vh{
+                height: 50vh;
+                object-fit: cover;
+            }
+            &-75vh{
+                height: 75vh;
+                object-fit: cover;
+            }
+            &-100vh{
+                height: 100vh;
+                object-fit: cover;
+            }
+        }
+        &-text{
+            &-center{
+                text-align: center;
+            }
+            &-left{
+                text-align: left;
+            }
+            &-right{
+                text-align: right;
+            }
+        }
+        &-w{
+            &-25{
+                width: 25%;
+            }
+            &-35{
+                width: 35%;
+            }
+            &-50{
+                width: 50%;
+            }
+            &-75{
+                width: 75%;
+            }
+            &-100{
+                width: 100%;
+            }
+        }
+    }
+    .tablet-minh{
+        &-25vh{
+            min-height: 25vh;
+        }
+        &-50vh{
+            min-height: 50vh;
+        }
+        &-75vh{
+            min-height: 75vh;
+        }
+        &-100vh{
+            min-height: 100vh;
+        }
+    }
+}
+@media all and (min-width: 840px){
+    .desktop{
+        &-expand{
+            .nav{
+                &-item{
+                    &:hover{
+                        .text-gray{
+                            color: $color__gray !important;
+                        }
+                        background-color: inherit !important;
+                        font-weight: inherit;
+                    }
+                    display: inline-flex !important;
+                    padding:7px !important;
+                    width: auto;
+                }
+                &-menu{
+                    &-icon{
+                        display: none;
+                    }
+                    background-color: transparent !important;
+                    border: none !important;
+                    display: block !important;
+                    opacity:1;
+                    padding-top:7px;
+                    position: static;
+                }
+            }
+        }
+        &-img{
+            &-25vh{
+                height: 25vh;
+                object-fit: cover;
+            }
+            &-50vh{
+                height: 50vh;
+                object-fit: cover;
+            }
+            &-75vh{
+                height: 75vh;
+                object-fit: cover;
+            }
+            &-100vh{
+                height: 100vh;
+                object-fit: cover;
+            }
+        }
+        &-text{
+            &-center{
+                text-align: center;
+            }
+            &-left{
+                text-align: left;
+            }
+            &-right{
+                text-align: right;
+            }
+        }
+        &-w{
+            &-25{
+                width: 25%;
+            }
+            &-35{
+                width: 35%;
+            }
+            &-50{
+                width: 50%;
+            }
+            &-75{
+                width: 75%;
+            }
+            &-100{
+                width: 100%;
+            }
+        }
+    }
+    .desktop-minh{
+        &-25vh{
+            min-height: 25vh;
+        }
+        &-50vh{
+            min-height: 50vh;
+        }
+        &-75vh{
+            min-height: 75vh;
+        }
+        &-100vh{
+            min-height: 100vh;
+        }
     }
 }

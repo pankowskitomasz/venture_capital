@@ -3,14 +3,43 @@ $bg__blend--type: multiply;
 $bg__classes:
     "error",
     "comingsoon",
-    "privacy";
+    "privacy",
+    "index",
+    "services",
+    "contact",
+    "user",
+    "portfolio";
+$bg__contact-img: 
+    "../img/index/bg_1.jpg",
+    "../img/lines.png";    
 $bg__comingsoon-img: "../img/coming.jpg";
 $bg__error-img: "../img/coming.jpg";
+$bg__index-img: 
+    "../img/index/bg_1.jpg",
+    "../img/coming.jpg",
+    "",
+    "",
+    "",
+    "../img/index/bg_2.jpg",
+    "../img/lines.png";
+$bg__portfolio-img: 
+    "../img/index/bg_1.jpg",
+    "../img/lines.png";  
 $bg__privacy-img: "../img/privacy.jpg";
+$bg__services-img: 
+    "../img/index/bg_1.jpg";
+$bg__user-img: 
+    "../img/index/bg_1.jpg",
+    "../img/lines.png";   
 $bg__aoa:
     $bg__error-img,
     $bg__comingsoon-img,
-    $bg__privacy-img;
+    $bg__privacy-img,
+    $bg__index-img,
+    $bg__services-img,
+    $bg__contact-img,
+    $bg__user-img,
+    $bg__portfolio-img;
 $body__min-height: 100%;
 $border__param: 1px solid;
 $border__radius: 30px;
@@ -18,13 +47,25 @@ $color__bg-1: #bbb;
 $color__black: #121212;
 $color__blue: #1cafed;
 $color__dark: #333;
+$color__dark-blue: darken($color__blue,30%);
+$color__gray: #777;
+$color__light-gray: #efefef;
 $color__white: #fff;
 $color__transparent: transparent;
+$filter-grayscale: grayscale(1);
+$filter-invert: invert(1);
 $font-logo__family: 'Playfair Display';
 $font-logo__size: 32px;
 $font-main__family: 'Playfair Display';
 $font-main__size: 16px;
+$header__height: 64px;
+$owl-dot__bg: $color__bg-1;
+$owl-dot__bg-active: $color__black;
+$owl-dot__margin: 10px;
+$owl-dot__size: 15px;
 $section__min-height: 100vh;
 $box_shadow: 0 0 3px $color__dark;
+$text-md: 16px;
+$text-lg: 20px;
 $text__shadow--dark: 0 0 3px $color__dark;
 $text__shadow--light: 0 0 3px $color__white;

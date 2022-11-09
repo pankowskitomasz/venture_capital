@@ -95,6 +95,11 @@ else{
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0,shrink-to-fit=no">
+        <meta property="og:title" content="Venture Capital">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="">
+        <meta property="og:image" content="">
+        <meta property="og:locale" content="en_US">
         <link rel="icon" href="img/favicon.png">
         <link rel="stylesheet" type="text/css" href="css/material-components-web.min.css">
         <link rel="stylesheet" type="text/css" href="css/styles.min.css">
@@ -193,7 +198,7 @@ else{
             </div>
             <div class="mdc-layout-grid__cell--span-12 text-center border-t border-gray">
                 <small class="text-white">  
-                    Copyright &copy; 2020-2021 Tomasz Pankowski. All rights reserved.
+                    Copyright &copy; 2020-2022 Tomasz Pankowski. All rights reserved.
                     <a class="text-white link" href="privacy.html">Privacy policy</a>
                 </small>
             </div>
